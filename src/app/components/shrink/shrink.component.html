@@ -1,0 +1,12 @@
+<ActionBar title="Shrink URL">
+    <NavigationButton text="Back"></NavigationButton>
+    <ActionItem text="Shrink" ios.position="right" (tap)="shrink()"></ActionItem>
+</ActionBar>
+<StackLayout class="form">
+    <StackLayout class="input-field">
+        <TextField class="input input-border" [(ngModel)]="longUrl" autocapitalizationType="none" focus="onFocus" returnKeyType="done" hint="Enter a URL "></TextField>
+    </StackLayout>
+    <StackLayout>
+        <Label text="The long URL above will be shrunken using the TinyURL shortening service" textWrap="true" class="footnote text-center"></Label>
+    </StackLayout>
+</StackLayout>

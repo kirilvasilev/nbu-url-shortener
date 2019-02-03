@@ -1,0 +1,13 @@
+<ActionBar title="TinyURL List">
+    <ActionItem text="New" ios.position="right" [nsRouterLink]="['/shrink']"></ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="urls" class="list-group">
+        <ng-template let-url="item">
+            <StackLayout class="list-group-item" (tap)="launchUrl(url.short)">
+                <Label [text]="url.short" class="h2"></Label>
+                <Label text="{{ url.long }}"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
